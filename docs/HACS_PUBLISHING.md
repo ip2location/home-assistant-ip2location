@@ -283,6 +283,8 @@ You can also trigger a run by hand with **Run workflow** (`workflow_dispatch`).
 | `More than one integration` | Keep exactly one directory under `custom_components/`. |
 | hassfest: `Invalid manifest` | Compare against the manifest documentation linked at the top. |
 | hassfest: translation mismatch | Make `translations/en.json` identical to `strings.json`. |
+| hassfest: `the string should not contain URLs` | Translation strings — including `data_description` — must not contain a URL. Move the link to the README or use a description placeholder. |
+| HACS: `The repository has no valid topics` | Add topics in the GitHub repository settings (for example `home-assistant`, `hacs`, `home-assistant-integration`). |
 | Workflow did not run | Confirm the file is at `.github/workflows/validate.yaml`. |
 
 Do not work around a failing check with `ignore:`. The default-store review
