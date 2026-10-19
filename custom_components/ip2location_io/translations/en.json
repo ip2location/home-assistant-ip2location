@@ -1,0 +1,84 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "IP2Location.io",
+        "description": "Look up the geolocation of an IP address using the IP2Location.io API. Leave the IP address empty to geolocate the public IP of your Home Assistant host. An API key is optional: without one you share the anonymous limit of 1,000 queries per day.",
+        "data": {
+          "name": "Name",
+          "api_key": "API key",
+          "ip_address": "IP address"
+        },
+        "data_description": {
+          "name": "Optional. Used as the name of the device in Home Assistant.",
+          "api_key": "Optional. Get a free key at https://www.ip2location.io/sign-up for 50,000 queries per month.",
+          "ip_address": "Optional. An IPv4 or IPv6 address to geolocate. Defaults to the IP of your Home Assistant host."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the IP2Location.io API.",
+      "invalid_auth": "The API key is invalid.",
+      "invalid_ip": "That is not a valid IPv4 or IPv6 address.",
+      "rate_limit": "The query limit has been reached. Without a key you get 1,000 queries per day.",
+      "unknown": "Unexpected error. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "This IP address is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "IP2Location.io options",
+        "data": {
+          "api_key": "API key",
+          "scan_interval": "Update interval (seconds)"
+        },
+        "data_description": {
+          "api_key": "Optional. Leave empty to use the anonymous limit of 1,000 queries per day.",
+          "scan_interval": "How often the API is queried. Between 300 and 86400 seconds."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the IP2Location.io API.",
+      "invalid_auth": "The API key is invalid.",
+      "rate_limit": "The query limit has been reached."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ip": { "name": "IP address" },
+      "country_code": { "name": "Country code" },
+      "country_name": { "name": "Country" },
+      "region_name": { "name": "Region" },
+      "city_name": { "name": "City" },
+      "zip_code": { "name": "ZIP code" },
+      "latitude": { "name": "Latitude" },
+      "longitude": { "name": "Longitude" },
+      "time_zone": { "name": "Time zone" },
+      "asn": { "name": "ASN" },
+      "as": { "name": "AS name" },
+      "isp": { "name": "ISP" },
+      "domain": { "name": "Domain" },
+      "net_speed": { "name": "Net speed" },
+      "idd_code": { "name": "IDD code" },
+      "area_code": { "name": "Area code" },
+      "weather_station_code": { "name": "Weather station code" },
+      "weather_station_name": { "name": "Weather station" },
+      "elevation": { "name": "Elevation" },
+      "usage_type": { "name": "Usage type" },
+      "address_type": { "name": "Address type" },
+      "mcc": { "name": "Mobile country code" },
+      "mnc": { "name": "Mobile network code" },
+      "mobile_brand": { "name": "Mobile brand" }
+    },
+    "binary_sensor": {
+      "is_proxy": { "name": "Proxy" }
+    },
+    "device_tracker": {
+      "location": { "name": "Location" }
+    }
+  }
+}

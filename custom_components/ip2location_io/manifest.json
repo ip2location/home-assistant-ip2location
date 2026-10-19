@@ -1,0 +1,12 @@
+{
+  "domain": "ip2location_io",
+  "name": "IP2Location.io",
+  "codeowners": ["@ip2location"],
+  "config_flow": true,
+  "documentation": "https://github.com/ip2location/home-assistant-ip2location",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/ip2location/home-assistant-ip2location/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
