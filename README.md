@@ -148,6 +148,14 @@ logger:
     custom_components.ip2location_io: debug
 ```
 
+## Publishing
+
+Maintainer notes for releasing and for submitting this repository to the HACS default store are in [docs/HACS_PUBLISHING.md](docs/HACS_PUBLISHING.md).
+
+## Contributing
+
+Issues and pull requests are welcome at <https://github.com/ip2location/home-assistant-ip2location>.
+
 ## License
 
 [MIT](LICENSE)

@@ -11,7 +11,7 @@
         },
         "data_description": {
           "name": "Optional. Used as the name of the device in Home Assistant.",
-          "api_key": "Optional. Get a free key at https://www.ip2location.io/sign-up for 50,000 queries per month.",
+          "api_key": "Optional. A free key raises the quota to 50,000 queries per month.",
           "ip_address": "Optional. An IPv4 or IPv6 address to geolocate. Defaults to the IP of your Home Assistant host."
         }
       }
